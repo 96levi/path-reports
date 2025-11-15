@@ -3,6 +3,8 @@ Dự án Path-Report nhằm tạo ra ứng dụng giúp các bác sĩ Giải ph�
 
 Path-Report tạo ra với mục đích phi lợi nhuận, hỗ trợ nhân viên y tế trong việc báo cáo kết quả dưới dạng văn bản (text-based) tuân thủ theo yêu cầu về [Bản quyền của Hiệp hội Giải Phẫu Bệnh học Hoa Kỳ](https://www.cap.org/protocols-and-guidelines/cancer-reporting-tools/cancer-protocol-templates). Path-Report không lưu trữ dữ liệu, người dùng tự lưu trữ dữ liệu bằng các công cụ lưu trữ của bệnh viện hoặc cá nhân.
 
+Ngoài ra, Path-Report cũng sẽ hỗ trợ chuẩn hóa các báo cáo tế bào học theo các nguồn chính thống như WHO, hệ thống Bethesda, Yokohama, Milan,...
+
 Dự án đang được xây dựng và cần được duy trì, cập nhật theo các khuyến cáo mới nhất, biên dịch sang tiếng Việt,... Do đó rất cần sự hỗ trợ từ mọi người.
 Nếu muốn hỗ trợ dự án, xin liên hệ Bs. Lê Vĩ qua email [v24996@gmail.com](mailto:v24996@gmail.com). Xin trân trọng cám ơn!
 
