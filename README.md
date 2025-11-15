@@ -8,6 +8,8 @@ Ngoài ra, Path-Report cũng sẽ hỗ trợ chuẩn hóa các báo cáo tế b�
 Dự án đang được xây dựng và cần được duy trì, cập nhật theo các khuyến cáo mới nhất, biên dịch sang tiếng Việt,... Do đó rất cần sự hỗ trợ từ mọi người.
 Nếu muốn hỗ trợ dự án, xin liên hệ Bs. Lê Vĩ qua email [v24996@gmail.com](mailto:v24996@gmail.com). Xin trân trọng cám ơn!
 
+Path-Report đang được chạy thử nghiệm tại đường dẫn [https://levi.raisinghopevn.com/tools/report/](https://levi.raisinghopevn.com/tools/report/).
+
 # Project configuration for developer
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.9.
 
