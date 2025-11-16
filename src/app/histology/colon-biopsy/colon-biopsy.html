@@ -3,6 +3,53 @@
 <p>Ref: <a href="https://documents.cap.org/protocols/ColoRectal.Bx_4.3.0.0.REL_CAPCP.pdf" target="_blank">CAP
         v4.3.0.0</a></p>
 
-<form [formGroup]="pathologyReportForm" (ngSubmit)="onSubmit()"> 
-    
+<form [formGroup]="pathologyReportForm" (ngSubmit)="onSubmit()">
+    <!-- Specimen-->
+    <fieldset formGroupName="specimen">
+        <legend>SPECIMEN</legend>
+        <fieldset>
+            <legend>Procedure</legend>
+            <label><input type="radio" formControlName="procedure" value="Excisional biopsy (polypectomy)"> Excisional
+                biopsy (polypectomy)</label>
+            <br><label><input type="radio" formControlName="procedure" value="Endoscopic mucosal resection (EMR)">
+                Endoscopic mucosal resection (EMR)</label>
+            <br><label><input type="radio" formControlName="procedure" value="Endoscopic submucosal dissection (ESD)">
+                Endoscopic submucosal dissection (ESD)</label>
+            <br><label><input type="radio" formControlName="procedure" value="Transanal disk excision"> Transanal disk
+                excision</label>
+            <br><label><input type="radio" formControlName="procedure" value="Other (specify):"> Other (specify):
+                @if (pathologyReportForm.get('specimen.procedure')?.value === 'Other (specify):') {
+                <input type="text" formControlName="procedureOther" />
+                }
+            </label>
+
+            <br><label><input type="radio" formControlName="procedure" value="Not specified"> Not specified</label>
+            <fieldset>
+                <legend>Specimen Intergrity</legend>
+                <label><input type="radio" formControlName="specimenIntergrity" value="Intact"> Intact</label>
+                <br><label><input type="radio" formControlName="specimenIntergrity" value="Fragmented"> Fragmented</label>
+                
+            </fieldset>
+        </fieldset>
+    </fieldset>
+    <!-- Tumour-->
+
+    <!-- Margins-->
+
+    <!-- Additional findings -->
+
+    <!-- Comments -->
+
+    <button type="submit" [disabled]="!pathologyReportForm.valid">Submit Report</button>
 </form>
+
+<!-- Preview -->
+
+<pre style="white-space: pre-wrap;">{{outputData}} </pre>
+
+<!-- Button to copy outputData to clipboard-->
+@if (outputData) {
+<button (click)="copyToClipboard()">Copy</button>
+}
+
+<!-- End Preview -->

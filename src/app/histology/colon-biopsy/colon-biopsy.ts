@@ -97,10 +97,10 @@ export class ColonBiopsy {
         dimensionLargestFragment: [''],
         dimensionLargestFragmentAdditional: [''],
         dimensionLargestFragmentExplain: [''],
-        
+
         // Tumor Comment
         tumorComment: [''],
-              
+
       }),
 
       // Margins
@@ -128,7 +128,7 @@ export class ColonBiopsy {
         marginStatusNonInvasiveTumorAdenomaAtMucosalMargin: [''],
         marginStatusNonInvasiveTumorOther: [''],
         marginStatusNonInvasiveTumorExplain: [''],
-         // Margin Comment
+        // Margin Comment
         marginComment: [''],
       }),
 
@@ -137,7 +137,7 @@ export class ColonBiopsy {
         findings: [''],
         findingsOther: [''],
       }),
-      
+
       // Special Studies (Note H)
 
       // Comments
@@ -149,9 +149,29 @@ export class ColonBiopsy {
 
   onSubmit(): void {
     if (this.pathologyReportForm.valid) {
-      this.outputData = JSON.stringify(this.pathologyReportForm.value, null, 2);
-      console.log(this.outputData);
+      console.clear();
+      console.log('Form Submitted!', this.pathologyReportForm.value);
+      this.outputData = "";
+      const data = this.pathologyReportForm.value;
+
+      // Specimen
+      if (data.specimen.procedure) {
+        this.outputData += `SPECIMEN\n`;
+        this.outputData += `Procedure: `;
+        this.outputData += `${data.specimen.procedure} ${data.specimen.procedure == 'Other (specify):' ? `${data.specimen.procedureOther}` : ''}\n`;
+        this.outputData += `\tSpecimen Integrity: `;
+        this.outputData += `${data.specimen.specimenIntergrity}\n\n`;
+      }
     }
+  }
+
+  // Button to copy final output to clipboard
+  copyToClipboard(): void {
+    navigator.clipboard.writeText(this.outputData).then(() => {
+      alert('Output data copied to clipboard!');
+    }).catch(err => {
+      alert('Failed to copy output data to clipboard.');
+    });
   }
 }
 

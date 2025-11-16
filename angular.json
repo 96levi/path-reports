@@ -53,10 +53,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "path-reports:build:production"
+              "buildTarget": "path-report:build:production"
             },
             "development": {
-              "buildTarget": "path-reports:build:development"
+              "buildTarget": "path-report:build:development"
             }
           },
           "defaultConfiguration": "development"
